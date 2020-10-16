@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="View" customClass="ViewController" customModule="PlaneDetect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="er8-cT-ect">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jKt-Ip-5ey">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZc-yy-jIt">
+                                <rect key="frame" x="0.0" y="603" width="375" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="FOV-kf-aUt"/>
+                                    <constraint firstAttribute="height" constant="44" id="IT7-Un-AgE"/>
+                                </constraints>
+                                <state key="normal" title="Add Bird"/>
+                                <connections>
+                                    <action selector="didTapTestButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s2r-J4-pmZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGD-o5-7WS">
+                                <rect key="frame" x="187.5" y="20" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ifv-wa-kXE">
+                                <rect key="frame" x="0.0" y="538" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" title="Spin the Bird"/>
+                                <connections>
+                                    <action selector="spinTheBird:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FRS-jT-thj"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.10000000000000001" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-cN-jGD">
+                                <rect key="frame" x="74" y="463" width="255" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="scaleModif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dz-xl-fM6"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Svm-Kn-Ym1"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gGD-o5-7WS" firstAttribute="centerX" secondItem="er8-cT-ect" secondAttribute="centerX" id="H3m-HL-KAL"/>
+                            <constraint firstItem="Svm-Kn-Ym1" firstAttribute="bottom" secondItem="jZc-yy-jIt" secondAttribute="bottom" constant="20" id="Iff-rf-Jab"/>
+                            <constraint firstItem="gGD-o5-7WS" firstAttribute="top" secondItem="Svm-Kn-Ym1" secondAttribute="top" constant="20" id="O1A-C1-BAb"/>
+                            <constraint firstItem="jZc-yy-jIt" firstAttribute="centerX" secondItem="er8-cT-ect" secondAttribute="centerX" id="UiS-d4-QLY"/>
+                            <constraint firstItem="jKt-Ip-5ey" firstAttribute="top" secondItem="er8-cT-ect" secondAttribute="top" id="XDO-0O-VGD"/>
+                            <constraint firstItem="jZc-yy-jIt" firstAttribute="leading" secondItem="Svm-Kn-Ym1" secondAttribute="leading" id="Y0a-Ui-W8C"/>
+                            <constraint firstItem="jKt-Ip-5ey" firstAttribute="bottom" secondItem="er8-cT-ect" secondAttribute="bottom" id="gFe-eE-pnA"/>
+                            <constraint firstItem="jKt-Ip-5ey" firstAttribute="leading" secondItem="er8-cT-ect" secondAttribute="leading" id="hd0-uc-0ZP"/>
+                            <constraint firstItem="jKt-Ip-5ey" firstAttribute="trailing" secondItem="er8-cT-ect" secondAttribute="trailing" id="rqj-lA-Ir2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birdSizeSlider" destination="g4R-cN-jGD" id="PgI-M8-haF"/>
+                        <outlet property="myARView" destination="jKt-Ip-5ey" id="hcB-eJ-gNw"/>
+                        <outlet property="myLabel" destination="gGD-o5-7WS" id="qRL-EZ-xgd"/>
+                        <outlet property="mySpinButton" destination="ifv-wa-kXE" id="Vkb-1A-IiJ"/>
+                        <outlet property="myTestButton" destination="jZc-yy-jIt" id="v9W-Bk-XGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
